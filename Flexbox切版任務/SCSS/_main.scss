@@ -1,0 +1,384 @@
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.active {
+  display: flex;
+}
+
+body {
+  @include rwd {
+    max-width: 900px;
+  }
+  @include phone {
+    max-width: 568px;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30px 0;
+  width: 100%;
+  position: relative;
+  @include phone {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .logo {
+    cursor: pointer;
+    @include rwd {
+      padding-left: 1.5rem;
+    }
+    @include phone {
+      img {
+        opacity: 0;
+      }
+      background-image: url("../imgs/student-week1/logotype-lg-dark.svg");
+      width: 115px;
+      height: 18px;
+      background-repeat: no-repeat;
+      margin-bottom: 8px;
+    }
+  }
+  .hamburger-icon {
+    position: absolute;
+    top: 30px;
+    left: 33px;
+    display: none;
+    @include phone {
+      display: flex;
+      cursor: pointer;
+    }
+  }
+  .cartlogo {
+    @include phone {
+      background-image: url("../imgs/student-week1/shopping_cart.png");
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
+  }
+  ul.menu {
+    display: flex;
+    li {
+      list-style-type: none;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-top: 10px;
+      padding-bottom: 8px;
+      cursor: pointer;
+      &:hover {
+        background-color: $text-color-sub;
+      }
+      a {
+        text-decoration: none;
+        color: $text-color-main;
+        font-weight: bold;
+      }
+    }
+    @include phone {
+      flex-direction: column;
+      display: none;
+      width: 100%;
+      text-align: center;
+      li {
+        padding-top: 6px;
+        padding-bottom: 6px;
+        a {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+section {
+  .banner {
+    margin-bottom: 60px;
+    @include phone {
+      margin-bottom: 0;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+    }
+  }
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  @include phone {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.left {
+  width: 300px;
+  @include rwd {
+    margin: 0 20px;
+  }
+  @include phone {
+    width: 100%;
+    margin: 0;
+  }
+  h2 {
+    font-size: $font-size-l;
+    color: $text-color-sub;
+    background-color: $text-color-main;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 65px;
+  }
+  .left_menu {
+    list-style-type: none;
+    li {
+      text-align: center;
+      line-height: 65px;
+      border: 1px solid #eaf0ed;
+      &:hover {
+        background-color: $text-color-sub;
+      }
+      a {
+        text-decoration: none;
+        color: $text-color-main;
+        font-size: $font-size-l;
+        font-weight: bolder;
+      }
+    }
+  }
+}
+
+.right {
+  width: 620px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @include phone {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 30px;
+  }
+  .card {
+    width: 300px;
+    position: relative;
+    margin-bottom: 20px;
+    &:hover {
+      box-shadow: 4px 5px 6px rgba(0, 0, 0, 50%);
+    }
+    @include rwd {
+      width: 95%;
+      img {
+        width: 100%;
+      }
+    }
+    @include phone {
+      width: 80%;
+      img {
+        width: 100%;
+      }
+    }
+    .tag {
+      position: absolute;
+      color: $text-color-sub;
+      background-color: $text-color-main;
+      writing-mode: vertical-rl;
+      padding: 10px;
+      top: 0;
+      left: 20px;
+      letter-spacing: 5px;
+    }
+    span {
+      position: absolute;
+      top: 19px;
+      right: 22px;
+      color: $text-color-main;
+      cursor: pointer;
+    }
+    .card_content {
+      display: flex;
+      line-height: 54px;
+      font-size: $font-size-m;
+      color: $text-color-main;
+      border: 1px solid #eaf0ed;
+      .food {
+        padding: 0 33px;
+        border-right: 1px solid #eaf0ed;
+      }
+      .price {
+        padding: 0 20px 0 25px;
+        font-weight: bold;
+        @include phone {
+          padding: 0 30px 0 5 5px;
+        }
+      }
+    }
+    .shop {
+      line-height: 65px;
+      color: $text-color-main;
+      background-color: $text-color-sub;
+      font-size: $font-size-l;
+      font-weight: bold;
+      cursor: pointer;
+      text-align: center;
+    }
+  }
+}
+
+@include phone {
+  #hide {
+    display: none;
+  }
+}
+
+section {
+  ul.page {
+    display: flex;
+    justify-content: flex-end;
+    line-height: 58px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    @include phone {
+      justify-content: center;
+    }
+    span {
+      width: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #eaf0ed;
+      cursor: pointer;
+    }
+    li {
+      list-style-type: none;
+      width: 60px;
+      text-align: center;
+      font-size: $font-size-m;
+      color: $text-color-main;
+      border: 1px solid #eaf0ed;
+      cursor: pointer;
+      &:hover {
+        background-color: $text-color-main;
+        color: $text-color-sub;
+      }
+    }
+  }
+}
+
+section.subscribe {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  height: 116px;
+  background-color: $text-color-main;
+  align-items: center;
+  @include phone {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 186px;
+  }
+}
+.slogan {
+  display: flex;
+  align-items: center;
+  h3 {
+    font-size: $font-size-l;
+    color: $text-color-sub;
+    padding-left: 20px;
+  }
+}
+form {
+  position: relative;
+  .email {
+    position: absolute;
+    top: 16px;
+    left: 20px;
+  }
+  input {
+    width: 380px;
+    height: 56px;
+    background-color: $text-color-sub;
+    border: none;
+    @include phone {
+      width: 315px;
+    }
+  }
+  .arrow {
+    position: absolute;
+    right: 0px;
+    padding: 14px 20px;
+    background-color: #ffe180;
+  }
+}
+
+footer {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  height: 341px;
+  position: relative;
+  background-color: $text-color-sub;
+  @include phone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .part {
+    width: 276px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: $text-color-main;
+    @include phone {
+      width: 80%;
+      ul {
+        margin: 30px 0;
+      }
+    }
+    ul {
+      margin-top: 50px;
+      li {
+        list-style-type: none;
+        line-height: 1.5rem;
+      }
+    }
+    .word {
+      position: absolute;
+      top: 30px;
+      right: 100px;
+      font-size: $font-size-l;
+      font-weight: bold;
+      writing-mode: vertical-rl;
+      @include phone {
+        display: none;
+      }
+    }
+  }
+  p {
+    width: 380px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+    color: $text-color-main;
+    @include phone {
+      width: 80%;
+      margin-bottom: 0;
+      display: block;
+    }
+  }
+}

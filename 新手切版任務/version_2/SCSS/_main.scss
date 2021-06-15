@@ -13,7 +13,7 @@ body {
 }
 
 .full-version {
-  width: 100%;
+  //   width: 100%;
   background-color: #415165;
 }
 
@@ -54,6 +54,11 @@ section {
   }
   img {
     margin: $margin-48;
+    max-width: 100%;
+    height: auto;
+    @include rwd {
+      margin: 24px 0;
+    }
   }
   .profile {
     margin-bottom: $margin-bottom-72;

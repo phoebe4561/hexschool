@@ -379,7 +379,6 @@ template {
 }
 
 .full-version {
-  width: 100%;
   background-color: #415165;
 }
 
@@ -421,6 +420,14 @@ section h1 {
 
 section img {
   margin: 48px;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1200px) {
+  section img {
+    margin: 24px 0;
+  }
 }
 
 section .profile {

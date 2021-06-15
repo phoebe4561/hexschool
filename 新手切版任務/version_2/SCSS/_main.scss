@@ -1,0 +1,121 @@
+body {
+  @include rwd {
+    max-width: 1200px;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  @include rwd {
+    width: 90%;
+  }
+}
+
+.full-version {
+  max-width: 1920px;
+  margin: 0 auto;
+  background-color: #415165;
+}
+
+.subtitle {
+  font-size: $font-size-32;
+  padding: $padding-8;
+  border-bottom: 1px solid #000000;
+  margin-bottom: $margin-bottom-16;
+}
+
+span {
+  font-size: $font-size-24;
+  color: #a00404;
+}
+span.white {
+  color: #ffffff;
+}
+
+p,
+li {
+  font-size: $font-size-24;
+}
+
+.first-line {
+  margin-bottom: $margin-bottom-24;
+}
+
+.first-li {
+  margin-bottom: $margin-bottom-16;
+}
+
+section {
+  h1 {
+    font-size: 80px;
+    padding-top: 47px;
+    padding-bottom: 17px;
+    border-bottom: 2px solid #000000;
+  }
+  img {
+    margin: $margin-48;
+  }
+  .profile {
+    margin-bottom: $margin-bottom-72;
+  }
+}
+
+.education {
+  margin-bottom: $margin-bottom-72;
+}
+
+.skills {
+  color: #ffffff;
+  margin-bottom: $margin-bottom-72;
+  h2 {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: 1px solid #ffffff;
+    padding-top: 16px;
+  }
+  ul {
+    width: 250px;
+    margin: 0 auto;
+    padding: 36px 0;
+    li {
+      border-left: 1px solid #ffffff;
+      padding-left: 20px;
+      line-height: 40px;
+    }
+  }
+}
+
+.work {
+  margin-bottom: $margin-bottom-72;
+  img {
+    padding: $padding-8;
+  }
+  .border {
+    padding-left: 24px;
+    ul {
+      border-left: 1px solid #96a9c4;
+      padding-left: 24px;
+    }
+  }
+}
+
+.contact {
+  color: #ffffff;
+  h2 {
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: 1px solid #ffffff;
+    padding-top: 16px;
+  }
+  ul.info {
+    padding: 36px 0;
+    text-align: center;
+    a {
+      color: #ffffff;
+      padding: 0 12px;
+    }
+  }
+}

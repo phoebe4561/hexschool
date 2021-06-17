@@ -2,18 +2,20 @@ body {
   @include rwd {
     max-width: 1200px;
   }
+  @include phone {
+    max-width: 568px;
+  }
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   @include rwd {
-    width: 80%;
+    width: 85%;
   }
 }
 
 .full-version {
-  //   width: 100%;
   background-color: #415165;
 }
 
@@ -22,11 +24,17 @@ body {
   padding: $padding-8;
   border-bottom: 1px solid #000000;
   margin-bottom: $margin-bottom-16;
+  @include phone {
+    font-size: 28px;
+  }
 }
 
 span {
   font-size: $font-size-24;
   color: #a00404;
+  @include phone {
+    font-size: $font-size-20;
+  }
 }
 span.white {
   color: #ffffff;
@@ -35,6 +43,9 @@ span.white {
 p,
 li {
   font-size: $font-size-24;
+  @include phone {
+    font-size: 18px;
+  }
 }
 
 .first-line {
@@ -51,6 +62,9 @@ section {
     padding-top: 47px;
     padding-bottom: 17px;
     border-bottom: 2px solid #000000;
+    @include phone {
+      font-size: 68px;
+    }
   }
   img {
     margin: $margin-48;
@@ -120,6 +134,9 @@ section {
     a {
       color: #ffffff;
       padding: 0 12px;
+      &:hover {
+        opacity: 0.8;
+      }
     }
   }
 }

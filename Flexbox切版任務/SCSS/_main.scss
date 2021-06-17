@@ -3,7 +3,7 @@
   margin: 0 auto;
 }
 
-.active {
+ul.menu.active {
   display: flex;
 }
 
@@ -92,6 +92,7 @@ header {
       li {
         padding-top: 6px;
         padding-bottom: 6px;
+        border: 1px solid #eaf0ed;
         a {
           font-size: 12px;
         }
@@ -206,6 +207,9 @@ main {
       right: 22px;
       color: $text-color-main;
       cursor: pointer;
+    }
+    img {
+      display: block;
     }
     .card_content {
       display: flex;

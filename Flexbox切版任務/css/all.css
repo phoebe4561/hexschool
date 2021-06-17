@@ -362,7 +362,7 @@ template {
   margin: 0 auto;
 }
 
-.active {
+ul.menu.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -499,6 +499,7 @@ header ul.menu li a {
   header ul.menu li {
     padding-top: 6px;
     padding-bottom: 6px;
+    border: 1px solid #eaf0ed;
   }
   header ul.menu li a {
     font-size: 12px;
@@ -663,6 +664,10 @@ main {
   right: 22px;
   color: #3f5d45;
   cursor: pointer;
+}
+
+.right .card img {
+  display: block;
 }
 
 .right .card .card_content {

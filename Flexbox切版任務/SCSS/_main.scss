@@ -1,4 +1,4 @@
-.container {
+.wrap {
   max-width: 940px;
   margin: 0 auto;
 }
@@ -35,7 +35,7 @@ header {
     }
     @include phone {
       img {
-        opacity: 0;
+        display: none;
       }
       background-image: url("../imgs/student-week1/logotype-lg-dark.svg");
       width: 115px;
@@ -44,7 +44,7 @@ header {
       margin-bottom: 8px;
     }
   }
-  .hamburger-icon {
+  .hamburger_icon {
     position: absolute;
     top: 30px;
     left: 33px;
@@ -125,7 +125,7 @@ main {
   }
 }
 
-.left {
+.aside {
   width: 300px;
   @include rwd {
     margin: 0 20px;
@@ -142,7 +142,7 @@ main {
     text-align: center;
     line-height: 65px;
   }
-  .left_menu {
+  .aside_menu {
     list-style-type: none;
     li {
       text-align: center;
@@ -156,12 +156,13 @@ main {
         color: $text-color-main;
         font-size: $font-size-l;
         font-weight: bolder;
+        display: block;
       }
     }
   }
 }
 
-.right {
+.dessert_cards {
   width: 620px;
   display: flex;
   justify-content: space-between;
@@ -254,7 +255,11 @@ section {
     line-height: 58px;
     margin-top: 10px;
     margin-bottom: 40px;
+    @include rwd {
+      margin-right: 30px;
+    }
     @include phone {
+      margin-right: 0;
       justify-content: center;
     }
     span {
@@ -270,12 +275,16 @@ section {
       width: 60px;
       text-align: center;
       font-size: $font-size-m;
-      color: $text-color-main;
-      border: 1px solid #eaf0ed;
       cursor: pointer;
-      &:hover {
-        background-color: $text-color-main;
-        color: $text-color-sub;
+      a {
+        border: 1px solid #eaf0ed;
+        color: $text-color-main;
+        text-decoration: none;
+        display: block;
+        &:hover {
+          background-color: $text-color-main;
+          color: $text-color-sub;
+        }
       }
     }
   }
@@ -286,18 +295,21 @@ section.subscribe {
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
-  height: 116px;
+  padding: 40px 0;
   background-color: $text-color-main;
   align-items: center;
-  @include phone {
+  @include rwd_700 {
     flex-direction: column;
     justify-content: space-evenly;
-    height: 186px;
+    padding: 30px;
   }
 }
 .slogan {
   display: flex;
   align-items: center;
+  @include rwd_700 {
+    margin-bottom: 1.5rem;
+  }
   h3 {
     font-size: $font-size-l;
     color: $text-color-sub;
@@ -316,14 +328,17 @@ form {
     height: 56px;
     background-color: $text-color-sub;
     border: none;
+    padding-left: 55px;
+    font-size: $font-size-m;
     @include phone {
-      width: 315px;
+      width: 320px;
+      font-size: 16px;
     }
   }
   .arrow {
     position: absolute;
     right: 0px;
-    padding: 14px 20px;
+    padding: 16px 20px;
     background-color: #ffe180;
   }
 }
@@ -341,17 +356,14 @@ footer {
     flex-direction: column;
     align-items: center;
   }
-  .part {
+  .store_info {
     width: 276px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     color: $text-color-main;
-    @include phone {
-      width: 80%;
-      ul {
-        margin: 30px 0;
-      }
+    @include rwd_700 {
+      width: 40%;
     }
     ul {
       margin-top: 50px;
@@ -360,7 +372,13 @@ footer {
         line-height: 1.5rem;
       }
     }
-    .word {
+    @include phone {
+      width: 80%;
+      ul {
+        margin: 30px 0;
+      }
+    }
+    .slogan_word {
       position: absolute;
       top: 30px;
       right: 100px;
@@ -379,6 +397,9 @@ footer {
     justify-content: flex-end;
     margin-bottom: 30px;
     color: $text-color-main;
+    @include rwd_700 {
+      width: 40%;
+    }
     @include phone {
       width: 80%;
       margin-bottom: 0;

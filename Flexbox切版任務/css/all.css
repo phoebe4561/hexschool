@@ -357,7 +357,7 @@ template {
   display: none;
 }
 
-.container {
+.wrap {
   max-width: 940px;
   margin: 0 auto;
 }
@@ -428,11 +428,11 @@ header .logo {
     margin-bottom: 8px;
   }
   header .logo img {
-    opacity: 0;
+    display: none;
   }
 }
 
-header .hamburger-icon {
+header .hamburger_icon {
   position: absolute;
   top: 30px;
   left: 33px;
@@ -440,7 +440,7 @@ header .hamburger-icon {
 }
 
 @media (max-width: 568px) {
-  header .hamburger-icon {
+  header .hamburger_icon {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -543,24 +543,24 @@ main {
   }
 }
 
-.left {
+.aside {
   width: 300px;
 }
 
 @media (max-width: 900px) {
-  .left {
+  .aside {
     margin: 0 20px;
   }
 }
 
 @media (max-width: 568px) {
-  .left {
+  .aside {
     width: 100%;
     margin: 0;
   }
 }
 
-.left h2 {
+.aside h2 {
   font-size: 24px;
   color: #eaf0ed;
   background-color: #3f5d45;
@@ -569,28 +569,29 @@ main {
   line-height: 65px;
 }
 
-.left .left_menu {
+.aside .aside_menu {
   list-style-type: none;
 }
 
-.left .left_menu li {
+.aside .aside_menu li {
   text-align: center;
   line-height: 65px;
   border: 1px solid #eaf0ed;
 }
 
-.left .left_menu li:hover {
+.aside .aside_menu li:hover {
   background-color: #eaf0ed;
 }
 
-.left .left_menu li a {
+.aside .aside_menu li a {
   text-decoration: none;
   color: #3f5d45;
   font-size: 24px;
   font-weight: bolder;
+  display: block;
 }
 
-.right {
+.dessert_cards {
   width: 620px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -603,7 +604,7 @@ main {
 }
 
 @media (max-width: 568px) {
-  .right {
+  .dessert_cards {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -616,36 +617,36 @@ main {
   }
 }
 
-.right .card {
+.dessert_cards .card {
   width: 300px;
   position: relative;
   margin-bottom: 20px;
 }
 
-.right .card:hover {
+.dessert_cards .card:hover {
   -webkit-box-shadow: 4px 5px 6px black;
           box-shadow: 4px 5px 6px black;
 }
 
 @media (max-width: 900px) {
-  .right .card {
+  .dessert_cards .card {
     width: 95%;
   }
-  .right .card img {
+  .dessert_cards .card img {
     width: 100%;
   }
 }
 
 @media (max-width: 568px) {
-  .right .card {
+  .dessert_cards .card {
     width: 80%;
   }
-  .right .card img {
+  .dessert_cards .card img {
     width: 100%;
   }
 }
 
-.right .card .tag {
+.dessert_cards .card .tag {
   position: absolute;
   color: #eaf0ed;
   background-color: #3f5d45;
@@ -658,7 +659,7 @@ main {
   letter-spacing: 5px;
 }
 
-.right .card span {
+.dessert_cards .card span {
   position: absolute;
   top: 19px;
   right: 22px;
@@ -666,11 +667,11 @@ main {
   cursor: pointer;
 }
 
-.right .card img {
+.dessert_cards .card img {
   display: block;
 }
 
-.right .card .card_content {
+.dessert_cards .card .card_content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -680,23 +681,23 @@ main {
   border: 1px solid #eaf0ed;
 }
 
-.right .card .card_content .food {
+.dessert_cards .card .card_content .food {
   padding: 0 33px;
   border-right: 1px solid #eaf0ed;
 }
 
-.right .card .card_content .price {
+.dessert_cards .card .card_content .price {
   padding: 0 20px 0 25px;
   font-weight: bold;
 }
 
 @media (max-width: 568px) {
-  .right .card .card_content .price {
+  .dessert_cards .card .card_content .price {
     padding: 0 30px 0 5 5px;
   }
 }
 
-.right .card .shop {
+.dessert_cards .card .shop {
   line-height: 65px;
   color: #3f5d45;
   background-color: #eaf0ed;
@@ -724,8 +725,15 @@ section ul.page {
   margin-bottom: 40px;
 }
 
+@media (max-width: 900px) {
+  section ul.page {
+    margin-right: 30px;
+  }
+}
+
 @media (max-width: 568px) {
   section ul.page {
+    margin-right: 0;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -752,12 +760,17 @@ section ul.page li {
   width: 60px;
   text-align: center;
   font-size: 20px;
-  color: #3f5d45;
-  border: 1px solid #eaf0ed;
   cursor: pointer;
 }
 
-section ul.page li:hover {
+section ul.page li a {
+  border: 1px solid #eaf0ed;
+  color: #3f5d45;
+  text-decoration: none;
+  display: block;
+}
+
+section ul.page li a:hover {
   background-color: #3f5d45;
   color: #eaf0ed;
 }
@@ -770,14 +783,14 @@ section.subscribe {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  height: 116px;
+  padding: 40px 0;
   background-color: #3f5d45;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-@media (max-width: 568px) {
+@media (max-width: 700px) {
   section.subscribe {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -786,7 +799,7 @@ section.subscribe {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    height: 186px;
+    padding: 30px;
   }
 }
 
@@ -797,6 +810,12 @@ section.subscribe {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 700px) {
+  .slogan {
+    margin-bottom: 1.5rem;
+  }
 }
 
 .slogan h3 {
@@ -820,18 +839,21 @@ form input {
   height: 56px;
   background-color: #eaf0ed;
   border: none;
+  padding-left: 55px;
+  font-size: 20px;
 }
 
 @media (max-width: 568px) {
   form input {
-    width: 315px;
+    width: 320px;
+    font-size: 16px;
   }
 }
 
 form .arrow {
   position: absolute;
   right: 0px;
-  padding: 14px 20px;
+  padding: 16px 20px;
   background-color: #ffe180;
 }
 
@@ -863,7 +885,7 @@ footer {
   }
 }
 
-footer .part {
+footer .store_info {
   width: 276px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -877,25 +899,31 @@ footer .part {
   color: #3f5d45;
 }
 
-@media (max-width: 568px) {
-  footer .part {
-    width: 80%;
-  }
-  footer .part ul {
-    margin: 30px 0;
+@media (max-width: 700px) {
+  footer .store_info {
+    width: 40%;
   }
 }
 
-footer .part ul {
+footer .store_info ul {
   margin-top: 50px;
 }
 
-footer .part ul li {
+footer .store_info ul li {
   list-style-type: none;
   line-height: 1.5rem;
 }
 
-footer .part .word {
+@media (max-width: 568px) {
+  footer .store_info {
+    width: 80%;
+  }
+  footer .store_info ul {
+    margin: 30px 0;
+  }
+}
+
+footer .store_info .slogan_word {
   position: absolute;
   top: 30px;
   right: 100px;
@@ -907,7 +935,7 @@ footer .part .word {
 }
 
 @media (max-width: 568px) {
-  footer .part .word {
+  footer .store_info .slogan_word {
     display: none;
   }
 }
@@ -925,6 +953,12 @@ footer p {
           justify-content: flex-end;
   margin-bottom: 30px;
   color: #3f5d45;
+}
+
+@media (max-width: 700px) {
+  footer p {
+    width: 40%;
+  }
 }
 
 @media (max-width: 568px) {

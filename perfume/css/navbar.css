@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+}
+
+.wrap {
+  max-width: 1110px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.full_wrap {
+  width: 100%;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 9px;
+}
+
+header ul.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 568px) {
+  header ul.menu {
+    display: none;
+  }
+}
+
+header ul.menu a {
+  color: #8d8d8d;
+  font-size: 20px;
+  display: block;
+  padding: 16px;
+}
+
+header ul.menu a:hover {
+  border-bottom: 3px solid #916019;
+  opacity: 0.8;
+}
+
+footer {
+  background-color: #916019;
+}
+
+footer .wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .wrap .footer_logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .wrap .footer_logo img {
+  padding-right: 20px;
+  width: 128px;
+  height: 38px;
+}
+
+footer .wrap .footer_logo p {
+  color: #e0e0e0;
+}
+
+footer .wrap .footer_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 568px) {
+  footer .wrap .footer_menu {
+    display: none;
+  }
+}
+
+footer .wrap .footer_menu a {
+  display: block;
+  font-size: 20px;
+  color: #e0e0e0;
+  padding: 28px 18px;
+}
+
+footer .wrap .footer_menu a:hover {
+  opacity: 0.8;
+}

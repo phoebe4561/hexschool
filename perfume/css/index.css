@@ -1,0 +1,562 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+}
+
+.banner {
+  margin-bottom: 60px;
+}
+
+.banner .banner_img {
+  max-width: 100%;
+  height: 870px;
+  background-image: url("../statics/imgs/perfume-week6/index1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 568px) {
+  .banner .banner_img {
+    background-position: 18%;
+  }
+}
+
+.banner .banner_content {
+  padding-top: 295px;
+  padding-right: 15%;
+  padding-left: 60%;
+  color: #ffffff;
+}
+
+@media (max-width: 1450px) {
+  .banner .banner_content {
+    padding-right: 10%;
+    padding-left: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner .banner_content {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.banner .banner_content h2 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.banner .banner_content p {
+  font-size: 24px;
+}
+
+.banner .banner_content button.shop {
+  background: #ffffff4d;
+  color: #ffffff;
+  font-size: 24px;
+  padding: 13px 109px;
+  border-radius: 30px;
+  border: 2px solid #ffffff;
+  margin-top: 16px;
+  cursor: pointer;
+}
+
+.banner .banner_content button.shop:hover {
+  opacity: 0.8;
+}
+
+.products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 568px) {
+  .products {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+.products .product_content {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-right: 6%;
+  padding-left: 6%;
+}
+
+@media (max-width: 768px) {
+  .products .product_content {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media (max-width: 568px) {
+  .products .product_content {
+    width: 100%;
+  }
+}
+
+.products .product_img {
+  width: 50%;
+  height: 555px;
+}
+
+@media (max-width: 768px) {
+  .products .product_img {
+    height: 350px;
+  }
+}
+
+@media (max-width: 568px) {
+  .products .product_img {
+    width: 100%;
+    height: 555px;
+  }
+}
+
+.products .product_img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 540px;
+}
+
+@media (max-width: 568px) {
+  .products .product_img img {
+    width: 568px;
+  }
+}
+
+.products .products_img {
+  width: 50%;
+  height: 1080px;
+}
+
+@media (max-width: 768px) {
+  .products .products_img {
+    height: 750px;
+  }
+}
+
+@media (max-width: 568px) {
+  .products .products_img {
+    width: 100%;
+    height: 680px;
+  }
+}
+
+.products .products_img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 568px) {
+  .products .products_img img {
+    width: 568px;
+  }
+}
+
+.row_reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+@media (max-width: 568px) {
+  .row_reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+.product_content h2 {
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.product_content p {
+  font-size: 20px;
+}
+
+.product_content p.lookmore {
+  color: #ac8a46;
+  margin-top: 10px;
+}
+
+@media (max-width: 568px) {
+  .product_content p.lookmore {
+    margin-bottom: 32px;
+  }
+}
+
+.product_content ul.product_list li {
+  padding: 26px 0;
+}
+
+.product_content ul.product_list li h2 {
+  font-size: 24px;
+}
+
+.product_content ul.product_list li p {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .product_content ul.product_list li {
+    padding: 3px 0;
+  }
+  .product_content ul.product_list li h2 {
+    font-size: 20px;
+  }
+}
+
+.product_content button {
+  padding: 18px 35px;
+  background-color: #0000000d;
+  border-radius: 30px;
+  border: 2px solid #000000;
+  margin-top: 34px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .product_content button {
+    margin-top: 3px;
+    padding: 3px 5px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 568px) {
+  .product_content button {
+    margin-top: 20px;
+    padding: 18px 35px;
+  }
+}
+
+.models {
+  background-color: #e0e0e0;
+}
+
+.models ul.model_products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 40px 0;
+  margin-top: 60px;
+}
+
+@media (max-width: 568px) {
+  .models ul.model_products {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-bottom: 0;
+    margin-top: 30px;
+  }
+}
+
+.models ul.model_products li {
+  width: 32%;
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .models ul.model_products li {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 568px) {
+  .models ul.model_products li {
+    width: 100%;
+  }
+}
+
+.models ul.model_products li .img_container {
+  width: 100%;
+  height: 540px;
+}
+
+@media (max-width: 768px) {
+  .models ul.model_products li .img_container {
+    height: 350px;
+  }
+}
+
+@media (max-width: 568px) {
+  .models ul.model_products li .img_container {
+    height: 400px;
+  }
+}
+
+.models ul.model_products li .img_container img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 568px) {
+  .models ul.model_products li .img_container img {
+    width: 568px;
+  }
+}
+
+.models ul.model_products li h3 {
+  font-weight: bold;
+}
+
+.models ul.model_products li p {
+  font-size: 16px;
+}
+
+.models ul.model_products li .price {
+  margin-top: 1rem;
+}
+
+@media (max-width: 568px) {
+  .models ul.model_products li .price {
+    margin-top: 4px;
+    margin-bottom: 32px;
+  }
+}
+
+.models ul.model_products li .price span {
+  color: #8d8d8d;
+  text-decoration: line-through;
+  padding-left: 8px;
+}
+
+.sold_out {
+  position: relative;
+}
+
+.sold_out .soldout_filter {
+  position: absolute;
+  width: 100%;
+  height: 540px;
+  z-index: 5;
+  opacity: 30%;
+  background-color: #000000;
+}
+
+@media (max-width: 768px) {
+  .sold_out .soldout_filter {
+    height: 350px;
+  }
+}
+
+@media (max-width: 568px) {
+  .sold_out .soldout_filter {
+    height: 400px;
+  }
+}
+
+.sold_out .soldout_text {
+  position: absolute;
+  font-size: 24px;
+  color: white;
+  z-index: 10;
+  top: 50%;
+  left: 35%;
+}
+
+@media (max-width: 768px) {
+  .sold_out .soldout_text {
+    left: 25%;
+  }
+}
+
+@media (max-width: 568px) {
+  .sold_out .soldout_text {
+    left: 35%;
+  }
+}
+
+#revised_img1 {
+  -o-object-position: 10% 90%;
+     object-position: 10% 90%;
+}
+
+#revised_img2 {
+  -o-object-position: 50% 90%;
+     object-position: 50% 90%;
+}
+
+.main_product {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .main_product {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+.main_product .mainp_img {
+  width: 60%;
+  height: 520px;
+}
+
+@media (max-width: 768px) {
+  .main_product .mainp_img {
+    width: 100%;
+  }
+}
+
+.main_product .mainp_img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main_product .product_content {
+  width: 37%;
+  padding-top: 82px;
+}
+
+@media (max-width: 768px) {
+  .main_product .product_content {
+    width: 100%;
+  }
+}
+
+.main_product .product_content p {
+  padding: 8px 0;
+}
+
+@media (max-width: 1450px) {
+  .main_product .product_content {
+    padding-top: 0;
+  }
+  .main_product .product_content p {
+    padding: 4px 0;
+  }
+  .main_product .product_content .lookmore {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.footer_banner .footer_img {
+  max-width: 100%;
+  height: 600px;
+  background-image: url("../statics/imgs/perfume-week6/index10.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 568px) {
+  .footer_banner .footer_img {
+    background-position: 10%;
+  }
+}
+
+.footer_banner .footer_content {
+  padding-top: 312px;
+  padding-left: 20%;
+}
+
+@media (max-width: 568px) {
+  .footer_banner .footer_content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.footer_banner .footer_content h2 {
+  font-size: 32px;
+  color: #8d8d8d;
+  padding-bottom: 20px;
+}
+
+.footer_banner .footer_content form.subscribe {
+  position: relative;
+  max-width: 350px;
+}
+
+.footer_banner .footer_content form.subscribe input.email {
+  height: 60px;
+  padding: 16px 20px;
+  font-size: 16px;
+  color: #8d8d8d;
+  border: 2px solid #916019;
+  border-radius: 4px;
+}
+
+.footer_banner .footer_content form.subscribe button.subscribe_btn {
+  width: 131px;
+  height: 60px;
+  background-color: #916019;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0 4px 4px 0;
+  color: #ffffff;
+  cursor: pointer;
+}

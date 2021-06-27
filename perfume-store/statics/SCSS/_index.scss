@@ -1,0 +1,311 @@
+.banner_img {
+  max-width: 100%;
+  height: 870px;
+  background-image: url("../statics/imgs/perfume-week6/index1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include phone {
+    background-position: 18%;
+  }
+}
+
+.banner_content {
+  padding-top: 295px;
+  padding-right: 15%;
+  padding-left: 60%;
+  color: $color-white;
+  @include rwd {
+    padding-right: 10%;
+    padding-left: 40%;
+  }
+  @include pad {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  h2 {
+    font-size: 40px;
+  }
+  button.shop {
+    background: #ffffff4d;
+    color: $color-white;
+    padding: 13px 109px;
+    border-radius: 30px;
+    border: 2px solid $color-white;
+    margin-top: 16px;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  @include phone {
+    flex-direction: column-reverse;
+  }
+}
+
+.product_content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 6%;
+  padding-left: 6%;
+  @include pad {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  @include phone {
+    width: 100%;
+  }
+}
+
+.product_img {
+  width: 50%;
+  height: 555px;
+  @include pad {
+    height: 350px;
+  }
+  @include phone {
+    width: 100%;
+    height: 555px;
+  }
+  img {
+    width: 540px;
+    @include phone {
+      width: 568px;
+    }
+  }
+}
+
+.products_img {
+  width: 50%;
+  height: 1080px;
+  @include pad {
+    height: 750px;
+  }
+  @include phone {
+    width: 100%;
+    height: 680px;
+  }
+  img {
+    @include phone {
+      width: 568px;
+    }
+  }
+}
+
+.row_reverse {
+  flex-direction: row-reverse;
+  @include phone {
+    flex-direction: column-reverse;
+  }
+}
+
+.lookmore {
+  color: #ac8a46;
+  margin-top: 10px;
+  @include phone {
+    margin-bottom: 32px;
+  }
+}
+
+.product_list {
+  li {
+    @include pad {
+      padding: 3px 0;
+      h2 {
+        font-size: $font-size-20;
+      }
+    }
+  }
+}
+
+button.plan {
+  padding: 18px 35px;
+  background-color: $color-white;
+  border-radius: 30px;
+  border: 2px solid #000000;
+  color: black;
+  margin-top: 34px;
+  font-size: $font-size-20;
+  &:hover {
+    background-color: #0000000d;
+  }
+  @include pad {
+    margin-top: 3px;
+    padding: 3px 5px;
+    font-size: $font-size-16;
+  }
+  @include phone {
+    margin-top: 20px;
+    padding: 18px 35px;
+  }
+}
+
+.models {
+  background-color: $color-light-gray;
+  ul.model_products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 0;
+    @include phone {
+      flex-direction: column;
+    }
+    li {
+      width: 32%;
+      @include phone {
+        width: 100%;
+      }
+      .img_container {
+        width: 100%;
+        height: 540px;
+        @include pad {
+          height: 350px;
+        }
+        @include phone {
+          height: 400px;
+        }
+        img {
+          @include phone {
+            width: 568px;
+          }
+        }
+      }
+      .price {
+        @include phone {
+          margin-top: 4px;
+          margin-bottom: 24px;
+        }
+        span {
+          color: $color-gray;
+          text-decoration: line-through;
+          padding-left: 8px;
+        }
+      }
+    }
+  }
+}
+
+.sold_out {
+  position: relative;
+  .soldout_filter {
+    position: absolute;
+    width: 100%;
+    height: 540px;
+    z-index: 5;
+    opacity: 30%;
+    background-color: #000000;
+    @include pad {
+      height: 350px;
+    }
+    @include phone {
+      height: 400px;
+    }
+  }
+  .soldout_text {
+    position: absolute;
+    color: white;
+    z-index: 10;
+    top: 50%;
+    left: 35%;
+    @include pad {
+      left: 25%;
+    }
+    @include phone {
+      left: 35%;
+    }
+  }
+}
+
+#revised_img1 {
+  object-position: 10% 90%;
+}
+#revised_img2 {
+  object-position: 50% 90%;
+}
+
+.main_product {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @include pad {
+    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .mainp_img {
+    width: 60%;
+    height: 520px;
+    @include pad {
+      width: 100%;
+    }
+  }
+  .product_content {
+    width: 37%;
+    padding-left: 0;
+    padding-right: 0;
+    @include pad {
+      width: 100%;
+    }
+    p {
+      padding: 8px 0;
+    }
+  }
+}
+
+.footer_img {
+  max-width: 100%;
+  height: 600px;
+  background-image: url("../statics/imgs/perfume-week6/index10.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  @include phone {
+    background-position: 10%;
+  }
+}
+
+.footer_content {
+  padding-top: 312px;
+  padding-left: 20%;
+  @include phone {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  h2 {
+    font-size: $font-size-32;
+    color: $color-gray;
+    padding-bottom: 20px;
+  }
+}
+
+form.subscribe {
+  position: relative;
+  max-width: 350px;
+  input.email {
+    height: 60px;
+    padding: 16px 20px;
+    font-size: $font-size-16;
+    color: $color-gray;
+    border: 2px solid $color-gold;
+    border-radius: 4px;
+  }
+  button.subscribe_btn {
+    width: 131px;
+    height: 60px;
+    background-color: $color-gold;
+    border: 2px solid $color-gold;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0 4px 4px 0;
+    color: $color-white;
+  }
+}

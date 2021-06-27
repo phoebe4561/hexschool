@@ -1,0 +1,151 @@
+.secondary-menu {
+  background-color: $color-gold;
+  .wrap {
+    padding-left: 0;
+    padding-right: 0;
+    ul.product_menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      @include pad {
+        display: none;
+      }
+    }
+  }
+}
+
+main.wrap {
+  margin-top: 80px;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @include pad {
+    flex-direction: column;
+    .dp-n {
+      display: none;
+    }
+  }
+}
+
+.img_list {
+  width: 68%;
+  display: flex;
+  flex-direction: column;
+  @include pad {
+    width: 100%;
+    padding-bottom: 28px;
+  }
+}
+
+.main_img {
+  background-image: url("../statics/imgs/perfume-week6/product1.jpg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  height: 460px;
+  background-size: cover;
+}
+
+.other_img {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  @include pad {
+    margin-bottom: 30px;
+  }
+}
+
+.dn {
+  display: none;
+}
+
+.df {
+  @include pad {
+    display: flex;
+  }
+}
+
+.img_c1 {
+  width: 48%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../statics/imgs/perfume-week6/product2.jpg");
+  height: 640px;
+  @include pad {
+    width: 100%;
+    height: 800px;
+    background-position: 20% 80%;
+  }
+  @include phone {
+    height: 640px;
+  }
+}
+
+.img_c2 {
+  width: 48%;
+  background-image: url("../statics/imgs/perfume-week6/product3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 640px;
+  @include pad {
+    width: 100%;
+    height: 800px;
+    margin-top: 30px;
+  }
+  @include phone {
+    height: 640px;
+  }
+}
+
+.img_c3 {
+  width: 100%;
+  background-image: url("../statics/imgs/perfume-week6/product1.jpg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  height: 460px;
+  background-size: cover;
+  margin-top: 30px;
+  @include phone {
+    height: 460px;
+  }
+}
+
+.product_details {
+  width: 30%;
+  @include pad {
+    width: 100%;
+  }
+  form {
+    display: flex;
+    input {
+      width: 150px;
+      height: 50px;
+      border: 1px solid $color-gold;
+      border-radius: 4px 0 0 4px;
+      padding-left: 1rem;
+    }
+    button {
+      width: 170px;
+      background-color: $color-gold;
+      border: 2px solid $color-gold;
+      border-radius: 0px 4px 4px 0px;
+      color: $color-white;
+    }
+  }
+}
+
+.money {
+  padding-top: 32px;
+  padding-bottom: 12px;
+}
+
+.heart {
+  padding-top: 8px;
+  padding-bottom: 80px;
+}
+
+.info {
+  padding-top: 8px;
+  padding-bottom: 20px;
+}

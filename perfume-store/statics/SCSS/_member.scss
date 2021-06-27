@@ -1,0 +1,140 @@
+label,
+input,
+select,
+option,
+button {
+  font-size: $font-size-16;
+  color: #818a91;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-sidebar {
+  width: 12%;
+  a {
+    &:hover {
+      border-bottom: 2px solid $color-gold;
+    }
+  }
+  @include pad {
+    width: 100%;
+    margin-bottom: 40px;
+    h2 {
+      display: none;
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+.right-info {
+  width: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include pad {
+    width: 100%;
+  }
+  @include phone {
+    flex-direction: column-reverse;
+  }
+}
+
+section.member-info {
+  width: 60%;
+  @include phone {
+    width: 100%;
+  }
+  form {
+    .form-group {
+      display: flex;
+      align-items: center;
+      label {
+        width: 20%;
+        @include phone {
+          width: 25%;
+        }
+      }
+      .input_content {
+        width: 80%;
+      }
+    }
+  }
+}
+
+section.member-records {
+  width: 35%;
+  @include phone {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .member-records-details {
+    li {
+      display: flex;
+      .stitle {
+        width: 33%;
+      }
+      span {
+        width: 66%;
+      }
+    }
+  }
+}
+
+.title {
+  border-bottom: 1px solid #8d8d8d;
+  max-width: 600px;
+}
+
+.points {
+  font-size: ($font-size-16)-2px;
+}
+
+.input_value {
+  width: 350px;
+  height: 38px;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  @include pad {
+    width: 255px;
+  }
+}
+
+.select_value {
+  width: 160px;
+  height: 38px;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+}
+
+#address,
+#delivery_address {
+  @include pad {
+    width: 80px;
+  }
+}
+
+.gender {
+  width: 59px;
+  height: 38px;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+}
+
+.form-groupB {
+  display: flex;
+  label {
+    width: 20%;
+    @include phone {
+      width: 25%;
+    }
+  }
+  .column {
+    width: 80%;
+  }
+}

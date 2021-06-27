@@ -1,0 +1,122 @@
+@import "variables";
+@import "base";
+@import "mixin";
+@import "util";
+
+header.wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 9px;
+  position: relative;
+  @include pad {
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.menu {
+  display: flex;
+  @include pad {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: #707070;
+    li {
+      border-bottom: 1px solid $color-white;
+    }
+  }
+  a {
+    color: $color-gray;
+    &:hover {
+      border-bottom: 3px solid $color-gold;
+    }
+    @include pad {
+      color: $color-white;
+    }
+  }
+}
+
+.menu.active {
+  display: flex;
+}
+
+.logo {
+  @include pad {
+    align-self: flex-start;
+    padding-left: 15px;
+  }
+}
+
+.dp-n {
+  @include pad {
+    display: none;
+  }
+}
+
+.cart_icon {
+  position: relative;
+  position: absolute;
+  right: 80px;
+  top: 15px;
+  font-size: 20px;
+  color: $color-gray;
+  display: none;
+  @include pad {
+    display: flex;
+  }
+  span {
+    position: absolute;
+    font-size: 10px;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    color: $color-white;
+    background: $color-gold;
+    border-radius: 100%;
+    top: -8px;
+    right: -8px;
+  }
+}
+
+.hamburger_icon {
+  display: none;
+  position: absolute;
+  color: $color-gray;
+  right: 15px;
+  @include pad {
+    display: flex;
+  }
+}
+
+footer {
+  background-color: $color-gold;
+  .wrap {
+    display: flex;
+    justify-content: space-between;
+    .footer_logo {
+      display: flex;
+      align-items: center;
+      img {
+        margin-right: 20px;
+      }
+      p {
+        color: $color-light-gray;
+      }
+    }
+  }
+
+  .footer_menu {
+    display: flex;
+    @include pad {
+      display: none;
+    }
+    a {
+      color: $color-light-gray;
+    }
+  }
+}

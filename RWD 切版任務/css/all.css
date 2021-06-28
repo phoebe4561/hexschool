@@ -1,19 +1,3 @@
-* {
-  padding: 0;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: normal;
-}
-
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
      ========================================================================== */
@@ -357,6 +341,36 @@ template {
   display: none;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
 .wrap {
   max-width: 1000px;
   padding-right: 15px;
@@ -364,9 +378,39 @@ template {
   margin: 0 auto;
 }
 
-header {
-  margin-top: 20px;
+.mb-1 {
+  margin-bottom: 16px;
+}
+
+.mb-2 {
   margin-bottom: 24px;
+}
+
+.mt-1 {
+  margin-top: 16px;
+}
+
+.mt-2 {
+  margin-top: 24px;
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+
+.fs-24 {
+  font-size: 24px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.border {
+  border: 2px solid black;
+}
+
+header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -388,19 +432,18 @@ header {
 }
 
 @media (max-width: 768px) {
-  header .logo {
-    background-image: url("https://fakeimg.pl/150x150/");
-    background-repeat: no-repeat;
+  .logo {
+    background: url("https://fakeimg.pl/150x150/") no-repeat;
     width: 150px;
     height: 150px;
     margin-bottom: 20px;
   }
-  header .logo img {
+  .logo img {
     display: none;
   }
 }
 
-header .menu {
+.menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -408,33 +451,22 @@ header .menu {
       flex-wrap: wrap;
 }
 
-header .menu li {
-  list-style: none;
-}
-
 @media (max-width: 768px) {
-  header .menu li {
+  .menu li {
     width: 50%;
     margin-bottom: 10px;
   }
 }
 
-header .menu li a {
-  display: block;
-  text-decoration: none;
+.menu li a {
   background: #3399ff;
   color: #fff;
   padding: 10px;
+  text-align: center;
 }
 
-header .menu li a:hover {
+.menu li a:hover {
   background: orange;
-}
-
-@media (max-width: 768px) {
-  header .menu li a {
-    text-align: center;
-  }
 }
 
 main {
@@ -457,60 +489,33 @@ main {
   }
 }
 
-main .content {
+.content {
   width: 75%;
-  border: 2px solid black;
   padding: 10px;
 }
 
 @media (max-width: 768px) {
-  main .content {
+  .content {
     width: 100%;
     margin-bottom: 20px;
   }
 }
 
-main .content h2 {
-  font-weight: bold;
-  font-size: 20px;
-  margin-bottom: 24px;
-}
-
-main .content p {
+.content p {
   line-height: 1.5;
-  font-size: 16px;
-  margin-bottom: 24px;
 }
 
-main .banners {
+.banners {
   width: 20%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  border: 2px solid black;
   padding: 5px;
 }
 
 @media (max-width: 768px) {
-  main .banners {
+  .banners {
     width: 100%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
-}
-
-main .banners img {
-  margin-bottom: 10px;
-  max-width: 100%;
-  height: auto;
 }
 
 footer {
   text-align: center;
-  margin: 1rem;
 }

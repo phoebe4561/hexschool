@@ -1,6 +1,4 @@
-.banner_img {
-  max-width: 100%;
-  height: 870px;
+.banner {
   background-image: url("../statics/imgs/perfume-week6/index1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -9,98 +7,85 @@
   }
 }
 
+.banner_container {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .banner_content {
-  padding-top: 295px;
-  padding-right: 15%;
-  padding-left: 60%;
+  max-width: 445px;
+  padding: 295px 0;
   color: $color-white;
-  @include rwd {
-    padding-right: 10%;
-    padding-left: 40%;
+  @include pad {
+    max-width: 100%;
+  }
+  @include phone {
+    padding: 101px 0 148px 0;
+  }
+}
+
+.btn_shop {
+  background: #ffffff4d;
+  color: $color-white;
+  padding: 13px 0;
+  max-width: 350px;
+  text-align: center;
+  border-radius: 30px;
+  border: 2px solid $color-white;
+  margin: 1rem 0;
+  &:hover {
+    opacity: 0.8;
   }
   @include pad {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-  h2 {
-    font-size: 40px;
-  }
-  button.shop {
-    background: #ffffff4d;
-    color: $color-white;
-    padding: 13px 109px;
-    border-radius: 30px;
-    border: 2px solid $color-white;
-    margin-top: 16px;
-    cursor: pointer;
-    &:hover {
-      opacity: 0.8;
-    }
+    margin: 1rem auto;
   }
 }
 
 .products {
   display: flex;
-  flex-wrap: wrap;
-  @include phone {
+  @include pad {
     flex-direction: column-reverse;
   }
 }
 
 .product_content {
   width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-right: 6%;
-  padding-left: 6%;
+  margin: auto;
+  max-width: 350px;
   @include pad {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-  @include phone {
+    max-width: 100%;
     width: 100%;
+    padding: 8px 0 32px 0;
   }
 }
 
 .product_img {
   width: 50%;
-  height: 555px;
   @include pad {
-    height: 350px;
-  }
-  @include phone {
     width: 100%;
-    height: 555px;
   }
-  img {
-    width: 540px;
-    @include phone {
-      width: 568px;
-    }
-  }
+  // img {
+  //   width: 100%;
+  //   // height: 555px;
+  //   @include pad {
+  //     height: 350px;
+  //   }
+  //   @include phone {
+  //     height: 555px;
+  //   }
+  // }
 }
 
 .products_img {
   width: 50%;
-  height: 1080px;
   @include pad {
-    height: 750px;
-  }
-  @include phone {
     width: 100%;
-    height: 680px;
-  }
-  img {
-    @include phone {
-      width: 568px;
-    }
   }
 }
 
 .row_reverse {
   flex-direction: row-reverse;
-  @include phone {
+  @include pad {
     flex-direction: column-reverse;
   }
 }
@@ -113,156 +98,104 @@
   }
 }
 
-.product_list {
-  li {
-    @include pad {
-      padding: 3px 0;
-      h2 {
-        font-size: $font-size-20;
-      }
-    }
-  }
-}
-
 button.plan {
   padding: 18px 35px;
   background-color: $color-white;
   border-radius: 30px;
   border: 2px solid #000000;
   color: black;
-  margin-top: 34px;
   font-size: $font-size-20;
+  display: block;
+  margin: 0 auto;
+  max-width: 350px;
   &:hover {
     background-color: #0000000d;
-  }
-  @include pad {
-    margin-top: 3px;
-    padding: 3px 5px;
-    font-size: $font-size-16;
-  }
-  @include phone {
-    margin-top: 20px;
-    padding: 18px 35px;
   }
 }
 
 .models {
   background-color: $color-light-gray;
-  ul.model_products {
+  .model_products {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 40px 0;
-    @include phone {
+    @include pad {
       flex-direction: column;
     }
     li {
       width: 32%;
-      @include phone {
+      @include pad {
         width: 100%;
       }
-      .img_container {
-        width: 100%;
-        height: 540px;
+      img {
         @include pad {
-          height: 350px;
-        }
-        @include phone {
-          height: 400px;
-        }
-        img {
-          @include phone {
-            width: 568px;
-          }
-        }
-      }
-      .price {
-        @include phone {
-          margin-top: 4px;
-          margin-bottom: 24px;
-        }
-        span {
-          color: $color-gray;
-          text-decoration: line-through;
-          padding-left: 8px;
+          width: 100%;
         }
       }
     }
+  }
+}
+
+.price {
+  @include pad {
+    margin-top: 4px;
+    margin-bottom: 24px;
+  }
+  span {
+    color: $color-gray;
+    text-decoration: line-through;
+    padding-left: 8px;
   }
 }
 
 .sold_out {
   position: relative;
-  .soldout_filter {
-    position: absolute;
-    width: 100%;
-    height: 540px;
-    z-index: 5;
-    opacity: 30%;
-    background-color: #000000;
-    @include pad {
-      height: 350px;
-    }
-    @include phone {
-      height: 400px;
-    }
-  }
-  .soldout_text {
-    position: absolute;
-    color: white;
-    z-index: 10;
-    top: 50%;
-    left: 35%;
-    @include pad {
-      left: 25%;
-    }
-    @include phone {
-      left: 35%;
-    }
-  }
 }
 
-#revised_img1 {
-  object-position: 10% 90%;
+.soldout_filter {
+  position: absolute;
+  width: 100%;
+  opacity: 30%;
+  padding-bottom: 154%;
+  background-color: #000000;
 }
-#revised_img2 {
-  object-position: 50% 90%;
+
+.soldout_text {
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 35%;
+  @include pad {
+    left: 40%;
+  }
 }
 
 .main_product {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   @include pad {
     flex-direction: column;
-    padding-top: 40px;
-    padding-bottom: 40px;
   }
   .mainp_img {
     width: 60%;
-    height: 520px;
     @include pad {
       width: 100%;
     }
   }
   .product_content {
-    width: 37%;
-    padding-left: 0;
-    padding-right: 0;
+    width: 36%;
     @include pad {
       width: 100%;
-    }
-    p {
-      padding: 8px 0;
+      padding: 8px 0 0 0;
     }
   }
 }
 
-.footer_img {
-  max-width: 100%;
-  height: 600px;
+.footer_banner {
   background-image: url("../statics/imgs/perfume-week6/index10.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -273,12 +206,7 @@ button.plan {
 }
 
 .footer_content {
-  padding-top: 312px;
-  padding-left: 20%;
-  @include phone {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
+  padding: 312px 0 144px 0;
   h2 {
     font-size: $font-size-32;
     color: $color-gray;
@@ -287,38 +215,25 @@ button.plan {
 }
 
 form.subscribe {
-  position: relative;
-  max-width: 350px;
+  display: flex;
   input.email {
-    height: 60px;
+    width: 30%;
     padding: 16px 20px;
-    font-size: $font-size-16;
     color: $color-gray;
     border: 2px solid $color-gold;
-    border-radius: 4px;
+    border-radius: 4px 0 0 4px;
+    @include pad {
+      width: 50%;
+    }
+    @include phone {
+      width: 100%;
+    }
   }
   button.subscribe_btn {
-    width: 131px;
-    height: 60px;
+    padding: 16px 20px;
     background-color: $color-gold;
     border: 2px solid $color-gold;
-    position: absolute;
-    top: 0;
-    right: 0;
     border-radius: 0 4px 4px 0;
     color: $color-white;
   }
 }
-
-// .img_container{
-//   width: 100%;
-//   height: 555px;
-//   @include phone{
-//     height: 350px;
-//   }
-//   img{
-//     width: 100%;
-//     height: 100%;
-//     object-fit: cover;
-//   }
-// }

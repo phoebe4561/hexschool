@@ -34,13 +34,18 @@ a {
 
 img {
   max-width: 100%;
-  height: 100%;
+  height: auto;
+  display: block;
   object-fit: cover;
 }
 
 button {
   cursor: pointer;
   transition: 0.3s all ease;
+}
+
+input:focus {
+  outline: none;
 }
 
 input[type="checkbox"] {

@@ -1,12 +1,8 @@
 .wrap {
-  max-width: $wrap-max-width;
+  max-width: 1140px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-}
-
-.full_wrap {
-  width: 100%;
 }
 
 .m1 {
@@ -85,6 +81,10 @@
 
 .fs-24 {
   font-size: $font-size-24;
+}
+
+.fs-28 {
+  font-size: $font-size-28;
 }
 
 .fs-32 {

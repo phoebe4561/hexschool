@@ -1,17 +1,10 @@
-@import "variables";
-@import "base";
-@import "mixin";
-@import "util";
-
 header.wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 9px;
-  position: relative;
+  padding-top: 9px;
   @include pad {
-    flex-direction: column;
     padding-left: 0;
     padding-right: 0;
   }
@@ -31,6 +24,7 @@ header.wrap {
   }
   a {
     color: $color-gray;
+    border-bottom: 3px solid transparent;
     &:hover {
       border-bottom: 3px solid $color-gold;
     }
@@ -57,17 +51,20 @@ header.wrap {
   }
 }
 
-.cart_icon {
-  position: relative;
-  position: absolute;
-  right: 80px;
-  top: 15px;
-  font-size: 20px;
-  color: $color-gray;
+.combo {
   display: none;
+  padding-right: 15px;
   @include pad {
     display: flex;
   }
+  a {
+    color: $color-gray;
+  }
+}
+
+.cart_icon {
+  position: relative;
+  padding-right: 2rem;
   span {
     position: absolute;
     font-size: 10px;
@@ -79,19 +76,19 @@ header.wrap {
     background: $color-gold;
     border-radius: 100%;
     top: -8px;
-    right: -8px;
+    right: 18px;
   }
 }
 
-.hamburger_icon {
-  display: none;
-  position: absolute;
-  color: $color-gray;
-  right: 15px;
-  @include pad {
-    display: flex;
-  }
-}
+// .hamburger_icon {
+//   display: none;
+//   position: absolute;
+//   color: $color-gray;
+//   right: 15px;
+//   @include pad {
+//     display: flex;
+//   }
+// }
 
 footer {
   background-color: $color-gold;

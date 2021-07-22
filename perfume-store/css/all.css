@@ -520,7 +520,7 @@ footer .footer_menu a {
   }
 }
 
-button.plan {
+.plan_btn {
   padding: 18px 35px;
   background-color: #ffffff;
   border-radius: 30px;
@@ -530,9 +530,10 @@ button.plan {
   display: block;
   margin: 0 auto;
   max-width: 350px;
+  text-align: center;
 }
 
-button.plan:hover {
+.plan_btn:hover {
   background-color: #0000000d;
 }
 
@@ -707,12 +708,16 @@ form.subscribe input.email {
   }
 }
 
-form.subscribe button.subscribe_btn {
+form.subscribe .subscribe_btn {
   padding: 16px 20px;
   background-color: #916019;
   border: 2px solid #916019;
   border-radius: 0 4px 4px 0;
   color: #ffffff;
+}
+
+form.subscribe .subscribe_btn:hover {
+  opacity: 0.9;
 }
 
 .secondary-menu {
@@ -1188,7 +1193,6 @@ main {
 .img_container img:hover {
   -webkit-transform: scale(1.2, 1.2);
           transform: scale(1.2, 1.2);
-  opacity: 0.8;
 }
 
 .card_icon {

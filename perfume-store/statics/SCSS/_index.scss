@@ -98,7 +98,7 @@
   }
 }
 
-button.plan {
+.plan_btn {
   padding: 18px 35px;
   background-color: $color-white;
   border-radius: 30px;
@@ -108,6 +108,7 @@ button.plan {
   display: block;
   margin: 0 auto;
   max-width: 350px;
+  text-align: center;
   &:hover {
     background-color: #0000000d;
   }
@@ -229,11 +230,14 @@ form.subscribe {
       width: 100%;
     }
   }
-  button.subscribe_btn {
+  .subscribe_btn {
     padding: 16px 20px;
     background-color: $color-gold;
     border: 2px solid $color-gold;
     border-radius: 0 4px 4px 0;
     color: $color-white;
+    &:hover {
+      opacity: 0.9;
+    }
   }
 }

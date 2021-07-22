@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+    <meta name="rating" content="General" />
+    <meta name="robots" content="index,follow" />
+
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+   
+    <!--!fontawsome-->
+    <script src="https://kit.fontawesome.com/eb2b622fe6.js" crossorigin="anonymous"></script>
+    <title>登入頁面</title>
+    <link rel="stylesheet" href="../css/all.css">
+</head>
+
+<body>
+    <header class="wrap">
+        <h1 class="logo">
+            <a href="index.html"><img src="../statics/imgs/perfume-week6/d’Perfume.png" alt="logo"></a>
+        </h1>
+        <div class="combo">
+            <a href="member.html" class="cart_icon">
+                <i class="fas fa-shopping-cart fs-28"></i><span>3</span>
+            </a>
+            <a href="#" class="hamburger_icon">
+                <i class="fas fa-bars fs-32"></i>
+            </a>
+        </div>
+        <ul class="menu">
+            <li><a class="fs-20 p3" href="productlist.html"><span class="dp-n"><i class="fas fa-store-alt"></i></span>Product</a></li>
+            <li><a class="fs-20 p3" href="member.html"><span class="dp-n"><i class="fas fa-user"></i></span>log in</a></li>
+            <li><a class="fs-20 p3" href="#"><span class="dp-n"><i class="fas fa-heart"></i></span>Wishlist</a></li>
+            <li><a class="fs-20 p3" href="#"><span class="dp-n"><i class="fas fa-shopping-cart"></i></span>Cart(3)</a></li>
+        </ul>
+    </header>
+
+    <section class="secondary-menu">
+        <div class="wrap">
+            <ul class="product_menu">
+                <li><a class="p3 color-g4" href="productlist.html">CHANEL</a></li>
+                <li><a class="p3 color-g4" href="productlist.html">Jo Malone</a></li>
+                <li><a class="p3 color-g4" href="productlist.html">Curology</a></li>
+                <li><a class="p3 color-g4" href="productlist.html">Dior</a></li>
+                <li><a class="p3 color-g4" href="productlist.html">Chloe</a></li>
+                <li><a class="p3 color-g4" href="productlist.html">ZARA</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <main class="wrap">
+        <div class="login_container">
+            <div class="login_img">
+                <img src="./statics/images/login.jpg" alt="loginPhoto">
+            </div>
+            <form action="" class="login_form">
+                <h2 class="fs-32 bold mb-2">Log in</h2>
+                <div class="form_group mb-2">
+                    <label class="bold" for="user">帳號</label>
+                    <input type="text" name="user" id="user">
+                </div>
+                <div class="form_group mb-2">
+                    <label class="bold" for="password">密碼</label>
+                    <input type="text" name="password" id="password">
+                </div>     
+                <div class="login_box">
+                    <a class="forgetpw fs-24" href="#">忘記密碼</a>
+                    <div class="login_btns">
+                        <button type="submit" class="signup_btn">註冊</button>
+                        <button type="submit" class="login_btn">登入</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="wrap">
+            <div class="footer_logo">
+                <a href="index.html"><img src="../statics/imgs/perfume-week6/d’Perfumewhite.png" alt="footer-logo"></a>
+                <p>© 2020. All Rights Reserved.</p>
+            </div>
+            <ul class="footer_menu">
+                <li><a class="fs-20 p3" href="productlist.html">Product</a></li>
+                <li><a class="fs-20 p3" href="#">Blog</a></li>
+                <li><a class="fs-20 p3" href="#">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+    <script src="../scripts/navbar.js"></script>
+
+</body>
+</html>

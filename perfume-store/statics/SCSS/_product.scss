@@ -5,8 +5,6 @@
     padding-right: 0;
     ul.product_menu {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-start;
       @include pad {
         display: none;
       }
@@ -15,7 +13,7 @@
 }
 
 main.wrap {
-  margin-top: 80px;
+  margin-top: 60px;
   margin-bottom: 60px;
   display: flex;
   justify-content: space-between;
@@ -39,7 +37,7 @@ main.wrap {
 }
 
 .main_img {
-  background-image: url("../statics/imgs/perfume-week6/product1.jpg");
+  background-image: url("../statics/images/product/img_item_1.jpg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
   height: 460px;
@@ -70,7 +68,7 @@ main.wrap {
   width: 48%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("../statics/imgs/perfume-week6/product2.jpg");
+  background-image: url("../statics/images/product/img_item_2.jpg");
   height: 640px;
   @include pad {
     width: 100%;
@@ -84,13 +82,14 @@ main.wrap {
 
 .img_c2 {
   width: 48%;
-  background-image: url("../statics/imgs/perfume-week6/product3.jpg");
+  background-image: url("../statics/images/product/img_item_3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 640px;
   @include pad {
     width: 100%;
     height: 800px;
+    background-position: 10% 60%;
     margin-top: 30px;
   }
   @include phone {
@@ -100,7 +99,7 @@ main.wrap {
 
 .img_c3 {
   width: 100%;
-  background-image: url("../statics/imgs/perfume-week6/product1.jpg");
+  background-image: url("../statics/images/product/img_item_1.jpg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
   height: 460px;
@@ -119,18 +118,28 @@ main.wrap {
   form {
     display: flex;
     input {
-      width: 150px;
-      height: 50px;
+      width: 50%;
+      padding: 16px 20px;
       border: 1px solid $color-gold;
       border-radius: 4px 0 0 4px;
       padding-left: 1rem;
+      @include pad {
+        width: 40%;
+      }
     }
-    button {
-      width: 170px;
+    .btn_cart {
+      width: 50%;
+      padding: 16px 20px;
       background-color: $color-gold;
       border: 2px solid $color-gold;
       border-radius: 0px 4px 4px 0px;
       color: $color-white;
+      &:hover {
+        opacity: 0.9;
+      }
+      @include pad {
+        width: 40%;
+      }
     }
   }
 }

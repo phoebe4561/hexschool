@@ -313,6 +313,11 @@ header.wrap {
   display: flex;
 }
 
+.logo img {
+  width: 128px;
+  height: 38px;
+}
+
 @media (max-width: 860px) {
   .logo {
     -ms-flex-item-align: start;
@@ -387,6 +392,8 @@ footer .wrap .footer_logo {
 
 footer .wrap .footer_logo img {
   margin-right: 20px;
+  width: 128px;
+  height: 38px;
 }
 
 footer .wrap .footer_logo p {
@@ -410,7 +417,7 @@ footer .footer_menu a {
 }
 
 .banner {
-  background-image: url("../statics/imgs/perfume-week6/index1.jpg");
+  background-image: url("/statics/images/index/img_index_1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -685,7 +692,7 @@ footer .footer_menu a {
 }
 
 .footer_banner {
-  background-image: url("../statics/imgs/perfume-week6/index10.jpg");
+  background-image: url("/statics/images/index/img_index_10.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

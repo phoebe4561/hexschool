@@ -39,6 +39,10 @@ header.wrap {
 }
 
 .logo {
+  img {
+    width: 128px;
+    height: 38px;
+  }
   @include pad {
     align-self: flex-start;
     padding-left: 15px;
@@ -100,6 +104,8 @@ footer {
       align-items: center;
       img {
         margin-right: 20px;
+        width: 128px;
+        height: 38px;
       }
       p {
         color: $color-light-gray;

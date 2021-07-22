@@ -8,13 +8,11 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  //   margin: 0 -15px;
 }
 
 .card {
   width: 24%;
   margin-bottom: 54px;
-  //   padding: 0 15px;
   @include pad {
     width: 49%;
   }

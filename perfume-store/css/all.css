@@ -417,7 +417,7 @@ footer .footer_menu a {
 }
 
 .banner {
-  background-image: url("../statics/images/index/img_index_1.jpg");
+  background-image: url("/statics/images/index/img_index_1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -692,7 +692,7 @@ footer .footer_menu a {
 }
 
 .footer_banner {
-  background-image: url("../statics/images/index/img_index_10.jpg");
+  background-image: url("/statics/images/index/img_index_10.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
